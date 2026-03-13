@@ -1,0 +1,295 @@
+$sage: #5b9a7d;
+$sage-light: #e8f3ed;
+$sage-dark: #3d7a5e;
+$amber-light: #fdf6e8;
+$cream: #f8f5f0;
+$cream-dark: #efe9e0;
+$text: #2c2c2c;
+$text-secondary: #7a7a7a;
+$text-light: #ababab;
+$card: #ffffff;
+$border: #eee8df;
+
+.onboarding {
+  min-height: 100vh;
+  background: $cream;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100rpx 40rpx 60rpx;
+  box-sizing: border-box;
+}
+
+// 步骤指示器
+.ob-dots {
+  display: flex;
+  gap: 12rpx;
+  margin-bottom: 48rpx;
+}
+
+.ob-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: $cream-dark;
+  transition: all 0.3s;
+}
+
+.ob-dot-active {
+  width: 36rpx;
+  border-radius: 6rpx;
+  background: $sage;
+}
+
+.ob-dot-done {
+  background: $sage-light;
+}
+
+// 通用步骤容器
+.ob-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+// Hero emoji
+.ob-hero {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: $sage-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32rpx;
+}
+
+.ob-hero-celebrate {
+  background: $amber-light;
+}
+
+.ob-hero-emoji {
+  font-size: 72rpx;
+}
+
+// 文字
+.ob-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: $text;
+  margin-bottom: 16rpx;
+}
+
+.ob-subtitle {
+  font-size: 30rpx;
+  color: $text-secondary;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 36rpx;
+}
+
+// 功能列表（2x2 网格居中）
+.ob-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+  width: 100%;
+  margin-bottom: 48rpx;
+}
+
+.ob-feature {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  background: $card;
+  border-radius: 20rpx;
+  padding: 28rpx 24rpx;
+  border: 1rpx solid $border;
+}
+
+.ob-feature-icon {
+  font-size: 36rpx;
+  flex-shrink: 0;
+}
+
+.ob-feature-text {
+  font-size: 28rpx;
+  color: $text;
+  font-weight: 500;
+}
+
+// 表单
+.ob-form {
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+.ob-field {
+  margin-bottom: 28rpx;
+}
+
+.ob-field-label {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: $text;
+  margin-bottom: 16rpx;
+  display: block;
+}
+
+.ob-field-input {
+  width: 100%;
+  height: 96rpx;
+  font-size: 34rpx;
+  color: $text;
+  background: $card;
+  border: 2rpx solid $border;
+  border-radius: 20rpx;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+// 头像选择
+.ob-avatar-grid {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 8rpx;
+}
+
+.ob-avatar-opt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  padding: 24rpx 0;
+  background: $card;
+  border: 3rpx solid $border;
+  border-radius: 24rpx;
+  transition: all 0.2s;
+
+  &:active { transform: scale(0.95); }
+}
+
+.ob-avatar-opt-active {
+  border-color: $sage;
+  background: $sage-light;
+  box-shadow: 0 4rpx 12rpx rgba($sage, 0.15);
+}
+
+.ob-avatar-emoji { font-size: 52rpx; }
+.ob-avatar-label { font-size: 24rpx; color: $text-secondary; }
+
+// 完成页汇总
+.ob-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $card;
+  border-radius: 28rpx;
+  border: 1rpx solid $border;
+  padding: 40rpx 60rpx;
+  margin-bottom: 32rpx;
+}
+
+.ob-summary-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: $sage-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64rpx;
+  margin-bottom: 16rpx;
+}
+
+.ob-summary-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: $text;
+}
+
+.ob-summary-age {
+  font-size: 28rpx;
+  color: $text-secondary;
+  margin-top: 4rpx;
+}
+
+.ob-hint {
+  font-size: 26rpx;
+  color: $text-light;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40rpx;
+}
+
+// 按钮
+.ob-btn {
+  padding: 32rpx 0;
+  border-radius: 24rpx;
+  background: $sage;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4rpx 16rpx rgba($sage, 0.25);
+  flex: 1;
+
+  &:active { transform: scale(0.98); }
+}
+
+.ob-btn-secondary {
+  padding: 32rpx 0;
+  border-radius: 24rpx;
+  background: $card;
+  color: $text;
+  font-size: 34rpx;
+  font-weight: 500;
+  text-align: center;
+  border: 2rpx solid $border;
+  flex: 1;
+
+  &:active { transform: scale(0.98); }
+}
+
+.ob-actions {
+  display: flex;
+  gap: 20rpx;
+  width: 100%;
+  margin-top: 48rpx;
+}
+
+// Language selector
+.ob-lang {
+  width: 100%;
+  margin-bottom: 32rpx;
+}
+
+.ob-lang-options {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 8rpx;
+}
+
+.ob-lang-btn {
+  flex: 1;
+  padding: 24rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  background: $card;
+  border: 3rpx solid $border;
+  border-radius: 20rpx;
+  color: $text-secondary;
+
+  &:active { transform: scale(0.95); }
+}
+
+.ob-lang-btn-active {
+  border-color: $sage;
+  background: $sage-light;
+  color: $sage;
+  box-shadow: 0 4rpx 12rpx rgba($sage, 0.15);
+}

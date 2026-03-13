@@ -1,0 +1,146 @@
+$sage: #5b9a7d;
+$sage-light: #e8f3ed;
+$sage-dark: #3d7a5e;
+$cream: #f8f5f0;
+$cream-dark: #efe9e0;
+$text: #2c2c2c;
+$text-secondary: #7a7a7a;
+$text-light: #ababab;
+$card: #ffffff;
+$border: #eee8df;
+
+.tutorial-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40rpx;
+}
+
+.tutorial-card {
+  width: 100%;
+  max-width: 600rpx;
+  background: $card;
+  border-radius: 36rpx;
+  padding: 48rpx 40rpx 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 20rpx 60rpx rgba(0, 0, 0, 0.2);
+}
+
+.tutorial-step-badge {
+  position: absolute;
+  top: 24rpx;
+  right: 28rpx;
+  font-size: 22rpx;
+  color: $text-light;
+  background: $cream;
+  padding: 6rpx 16rpx;
+  border-radius: 12rpx;
+}
+
+.tutorial-emoji-wrap {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: $sage-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28rpx;
+}
+
+.tutorial-emoji {
+  font-size: 64rpx;
+}
+
+.tutorial-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: $text;
+  margin-bottom: 16rpx;
+}
+
+.tutorial-desc {
+  font-size: 30rpx;
+  color: $text-secondary;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 32rpx;
+}
+
+// 步骤指示器
+.tutorial-dots {
+  display: flex;
+  gap: 10rpx;
+  margin-bottom: 32rpx;
+}
+
+.tutorial-dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: $cream-dark;
+  transition: all 0.3s;
+}
+
+.tutorial-dot-active {
+  width: 28rpx;
+  border-radius: 5rpx;
+  background: $sage;
+}
+
+.tutorial-dot-done {
+  background: $sage-light;
+}
+
+// 按钮
+.tutorial-actions {
+  display: flex;
+  gap: 16rpx;
+  width: 100%;
+}
+
+.tutorial-btn-next {
+  flex: 1;
+  padding: 28rpx 0;
+  border-radius: 20rpx;
+  background: $sage;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4rpx 12rpx rgba($sage, 0.25);
+
+  &:active { transform: scale(0.97); }
+}
+
+.tutorial-btn-prev {
+  padding: 28rpx 32rpx;
+  border-radius: 20rpx;
+  background: $cream;
+  color: $text-secondary;
+  font-size: 30rpx;
+  font-weight: 500;
+  text-align: center;
+
+  &:active { transform: scale(0.97); }
+}
+
+.tutorial-skip {
+  margin-top: 20rpx;
+  padding: 12rpx 24rpx;
+}
+
+.tutorial-skip-text {
+  font-size: 26rpx;
+  color: $text-light;
+}

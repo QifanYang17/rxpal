@@ -1,0 +1,330 @@
+$sage: #5b9a7d;
+$sage-light: #e8f3ed;
+$sage-dark: #3d7a5e;
+$sky: #6ba3c7;
+$sky-light: #e6f1f8;
+$coral: #e8886f;
+$coral-light: #fdf0ed;
+$amber: #d4a84b;
+$amber-light: #fdf6e8;
+$cream: #f8f5f0;
+$cream-dark: #efe9e0;
+$text: #2c2c2c;
+$text-secondary: #7a7a7a;
+$text-light: #ababab;
+$card: #ffffff;
+$border: #eee8df;
+
+.home {
+  padding: 24rpx 32rpx 160rpx;
+}
+
+// Greeting
+.greeting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+
+  &-left {}
+
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 12rpx;
+  }
+
+  &-emoji { font-size: 44rpx; }
+
+  &-name {
+    font-size: 44rpx;
+    font-weight: 700;
+    color: $text;
+  }
+
+  &-date {
+    font-size: 26rpx;
+    color: $text-secondary;
+    margin-top: 8rpx;
+  }
+
+  &-avatar {
+    font-size: 72rpx;
+  }
+}
+
+// Progress card
+.progress-card {
+  background: $card;
+  border-radius: 32rpx;
+  border: 1rpx solid $border;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04);
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  margin-bottom: 32rpx;
+
+  &-title {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+
+  &-bar-wrap {
+    width: 100%;
+    height: 16rpx;
+    background: $sage-light;
+    border-radius: 8rpx;
+    overflow: hidden;
+  }
+
+  &-bar {
+    height: 100%;
+    background: $sage;
+    border-radius: 8rpx;
+    transition: width 0.5s ease;
+  }
+
+  &-pct {
+    font-size: 64rpx;
+    font-weight: 700;
+    color: $sage;
+    line-height: 1;
+  }
+
+  &-sub {
+    font-size: 26rpx;
+    color: $text-secondary;
+  }
+}
+
+// Quick stats
+.stats {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 40rpx;
+
+  &-item {
+    flex: 1;
+    border-radius: 24rpx;
+    padding: 24rpx 16rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rpx;
+  }
+
+  &-icon { font-size: 36rpx; }
+
+  &-value {
+    font-size: 36rpx;
+    font-weight: 700;
+  }
+
+  &-label {
+    font-size: 22rpx;
+    color: $text-secondary;
+  }
+
+  &-sage { background: $sage-light; .stats-value { color: $sage-dark; } }
+  &-sky { background: $sky-light; .stats-value { color: $sky; } }
+  &-amber { background: $amber-light; .stats-value { color: $amber; } }
+}
+
+// Section header
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+
+  &-title {
+    font-size: 34rpx;
+    font-weight: 600;
+    color: $text;
+  }
+
+  &-sub {
+    font-size: 26rpx;
+    color: $text-light;
+  }
+
+  &-link {
+    font-size: 26rpx;
+    color: $sage;
+    font-weight: 500;
+  }
+}
+
+// Reminder list
+.reminder-list {
+  margin-bottom: 40rpx;
+}
+
+.reminder-item {
+  background: $card;
+  border-radius: 24rpx;
+  border: 1rpx solid $border;
+  padding: 28rpx;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 16rpx;
+
+  &:active { transform: scale(0.98); }
+
+  &-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80rpx;
+  }
+
+  &-time-text {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: $text;
+  }
+
+  &-time-label {
+    font-size: 20rpx;
+    color: $text-light;
+    margin-top: 4rpx;
+  }
+
+  &-divider {
+    width: 2rpx;
+    height: 64rpx;
+    background: $border;
+  }
+
+  &-info { flex: 1; min-width: 0; }
+
+  &-title {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: $text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-subtitle {
+    font-size: 26rpx;
+    color: $text-secondary;
+    margin-top: 4rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-dosage {
+    font-size: 22rpx;
+    color: $text-light;
+    margin-top: 8rpx;
+  }
+
+  &-check {
+    width: 52rpx;
+    height: 52rpx;
+    border-radius: 50%;
+    border: 3rpx solid rgba($sage, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24rpx;
+    color: rgba($sage, 0.3);
+    flex-shrink: 0;
+  }
+}
+
+.all-done {
+  background: $card;
+  border-radius: 24rpx;
+  border: 1rpx solid $border;
+  padding: 48rpx;
+  text-align: center;
+
+  &-icon {
+    font-size: 48rpx;
+    color: $sage;
+    margin-bottom: 12rpx;
+  }
+
+  &-text {
+    font-size: 28rpx;
+    color: $text-secondary;
+  }
+}
+
+// Latest record
+.latest-record {
+  background: $card;
+  border-radius: 24rpx;
+  border: 1rpx solid $border;
+  padding: 32rpx;
+  margin-bottom: 40rpx;
+
+  &-date {
+    display: flex;
+    align-items: center;
+    gap: 8rpx;
+    font-size: 26rpx;
+    color: $text-secondary;
+    margin-bottom: 16rpx;
+  }
+
+  &-hospital {
+    display: flex;
+    align-items: center;
+    gap: 12rpx;
+    margin-bottom: 16rpx;
+  }
+
+  &-hospital-icon {
+    font-size: 32rpx;
+    color: $sage;
+  }
+
+  &-hospital-name {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text;
+  }
+
+  &-hospital-dept {
+    font-size: 26rpx;
+    color: $text-secondary;
+  }
+
+  &-diagnosis {
+    font-size: 28rpx;
+    color: $text;
+    line-height: 1.6;
+  }
+}
+
+// Floating button
+.fab {
+  position: fixed;
+  right: 32rpx;
+  bottom: 200rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: $sage;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba($sage, 0.3);
+  z-index: 100;
+
+  &:active { transform: scale(0.92); }
+
+  &-icon {
+    font-size: 44rpx;
+    color: #fff;
+  }
+}

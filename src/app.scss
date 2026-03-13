@@ -1,0 +1,83 @@
+// ========== 此间有序全局样式 ==========
+// 色彩体系（复用 Web 版）
+$cream: #f8f5f0;
+$cream-dark: #efe9e0;
+$sage: #5b9a7d;
+$sage-light: #e8f3ed;
+$sage-dark: #3d7a5e;
+$sky: #6ba3c7;
+$sky-light: #e6f1f8;
+$coral: #e8886f;
+$coral-light: #fdf0ed;
+$amber: #d4a84b;
+$amber-light: #fdf6e8;
+$text: #2c2c2c;
+$text-secondary: #7a7a7a;
+$text-light: #ababab;
+$card: #ffffff;
+$border: #eee8df;
+
+// 全局重置
+page {
+  background-color: $cream;
+  color: $text;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+
+// 通用卡片
+.card {
+  background: $card;
+  border-radius: 32rpx;
+  border: 1rpx solid $border;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+// 通用按钮
+.btn-sage {
+  background: $sage;
+  color: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+
+.btn-outline {
+  background: $card;
+  color: $text;
+  border: 1rpx solid $border;
+  border-radius: 24rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32rpx;
+}
+
+// 标签样式
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4rpx 16rpx;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+.tag-sage { background: $sage-light; color: $sage; }
+.tag-sky { background: $sky-light; color: $sky; }
+.tag-coral { background: $coral-light; color: $coral; }
+.tag-amber { background: $amber-light; color: $amber; }
+
+// 分割线
+.divider {
+  height: 1rpx;
+  background: $border;
+}
+
+// 安全区底部
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

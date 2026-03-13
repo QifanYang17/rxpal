@@ -1,0 +1,206 @@
+$sage: #5b9a7d;
+$sage-light: #e8f3ed;
+$sage-dark: #3d7a5e;
+$sky: #6ba3c7;
+$sky-light: #e6f1f8;
+$coral: #e8886f;
+$coral-light: #fdf0ed;
+$amber: #d4a84b;
+$amber-light: #fdf6e8;
+$cream: #f8f5f0;
+$cream-dark: #efe9e0;
+$text: #2c2c2c;
+$text-secondary: #7a7a7a;
+$text-light: #ababab;
+$card: #ffffff;
+$border: #eee8df;
+
+.medication { padding: 24rpx 32rpx 32rpx; }
+
+.med-actions {
+  display: flex; gap: 16rpx; margin-bottom: 24rpx;
+}
+
+.med-action-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 12rpx; padding: 24rpx 0; border-radius: 20rpx;
+  font-size: 30rpx; font-weight: 600;
+  &:active { transform: scale(0.97); }
+}
+
+.med-action-scan {
+  background: $sage; color: #fff; box-shadow: 0 4rpx 12rpx rgba($sage, 0.25);
+}
+
+.med-action-add {
+  background: $card; color: $text; border: 1rpx solid $border;
+}
+
+.med-action-icon { font-size: 32rpx; }
+.med-action-text { font-size: 28rpx; }
+
+.page-title {
+  display: flex; align-items: center; gap: 16rpx; margin-bottom: 32rpx;
+  &-icon { font-size: 40rpx; }
+  &-text { font-size: 38rpx; font-weight: 700; color: $text; }
+}
+
+.tab-bar {
+  display: flex; background: $cream-dark; border-radius: 20rpx; padding: 4rpx; margin-bottom: 32rpx;
+}
+
+.tab-btn {
+  flex: 1; padding: 20rpx 0; text-align: center; font-size: 30rpx; font-weight: 500;
+  color: $text-secondary; border-radius: 16rpx;
+  &-active { background: $card; color: $sage; box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.06); }
+}
+
+// Drug cards
+.med-list { display: flex; flex-direction: column; gap: 20rpx; }
+
+.med-card {
+  background: $card;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  border: 1rpx solid rgba($border, 0.6);
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.04);
+  border-left: 6rpx solid $sage;
+
+  &-coral { border-left-color: $coral; }
+  &-amber { border-left-color: $amber; }
+  &-sage { border-left-color: $sage; }
+
+  &-top {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 16rpx;
+  }
+
+  &-name { font-size: 30rpx; font-weight: 700; color: $text; }
+
+  &-dosage {
+    padding: 4rpx 16rpx; border-radius: 20rpx; font-size: 24rpx; font-weight: 600;
+  }
+
+  &-dosage-sage { background: $sage-light; color: $sage; }
+  &-dosage-coral { background: $coral-light; color: $coral; }
+  &-dosage-amber { background: $amber-light; color: $amber; }
+
+  &-freq {
+    display: flex; align-items: center; gap: 12rpx; margin-bottom: 20rpx;
+  }
+
+  &-freq-text { font-size: 26rpx; color: $text-secondary; }
+  &-freq-sep { color: $border; }
+
+  &-time-tags { display: flex; gap: 8rpx; }
+
+  &-time-tag {
+    padding: 4rpx 12rpx; background: $sage-light; color: $sage; font-size: 24rpx;
+    border-radius: 8rpx; font-weight: 500;
+  }
+
+  &-remaining { margin-bottom: 12rpx; }
+
+  &-remaining-header {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 8rpx;
+  }
+
+  &-remaining-label { font-size: 24rpx; color: $text-secondary; }
+  &-remaining-days { font-size: 24rpx; font-weight: 600; display: flex; align-items: center; gap: 4rpx; }
+  &-remaining-coral { color: $coral; }
+  &-remaining-amber { color: $amber; }
+  &-remaining-sage { color: $sage; }
+
+  &-bar-wrap {
+    height: 12rpx; background: $cream-dark; border-radius: 6rpx; overflow: hidden;
+  }
+
+  &-bar {
+    height: 100%; border-radius: 6rpx; transition: width 0.5s;
+    &-sage { background: $sage; }
+    &-coral { background: $coral; }
+    &-amber { background: $amber; }
+  }
+
+  &-notes { font-size: 24rpx; color: $text-light; margin-top: 12rpx; line-height: 1.5; }
+}
+
+// Schedule
+.schedule { position: relative; padding-left: 100rpx; }
+.schedule-line {
+  position: absolute; left: 26rpx; top: 16rpx; bottom: 16rpx; width: 4rpx;
+  background: rgba($sage, 0.15); border-radius: 2rpx;
+}
+
+.slot { position: relative; margin-bottom: 40rpx; &:last-child { margin-bottom: 0; } }
+
+.slot-dot {
+  position: absolute; left: -100rpx; top: 20rpx; width: 52rpx; height: 52rpx;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2;
+}
+
+.slot-dot-current {
+  background: $sage; box-shadow: 0 4rpx 12rpx rgba($sage, 0.3);
+  .slot-dot-inner { width: 20rpx; height: 20rpx; border-radius: 50%; background: #fff; }
+}
+
+.slot-dot-past {
+  background: rgba($sage, 0.2);
+  .slot-dot-inner { width: 20rpx; height: 20rpx; border-radius: 50%; background: rgba($sage, 0.5); }
+}
+
+.slot-dot-future {
+  background: $cream-dark; border: 3rpx solid rgba($sage, 0.2);
+  .slot-dot-inner { width: 20rpx; height: 20rpx; border-radius: 50%; background: rgba($sage, 0.25); }
+}
+
+.slot-card {
+  background: $card; border-radius: 24rpx; padding: 28rpx;
+  border: 1rpx solid rgba($border, 0.6); box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.04);
+
+  &-current { border-color: rgba($sage, 0.4); box-shadow: 0 4rpx 16rpx rgba($sage, 0.12); }
+}
+
+.slot-header {
+  display: flex; align-items: center; gap: 16rpx; margin-bottom: 20rpx;
+}
+
+.slot-emoji { font-size: 36rpx; }
+.slot-label { font-size: 30rpx; font-weight: 700; color: $text; }
+.slot-time { font-size: 24rpx; color: $text-secondary; }
+
+.slot-now {
+  margin-left: auto; padding: 4rpx 12rpx; background: $sage; color: #fff;
+  font-size: 20rpx; font-weight: 600; border-radius: 20rpx;
+}
+
+.slot-meds { display: flex; flex-direction: column; gap: 12rpx; }
+
+.slot-med-item {
+  display: flex; align-items: center; gap: 16rpx; padding: 16rpx 20rpx;
+  border-radius: 16rpx; background: $cream;
+}
+
+.slot-med-item-past { background: rgba($cream-dark, 0.6); }
+
+.slot-med-icon {
+  width: 56rpx; height: 56rpx; border-radius: 12rpx;
+  display: flex; align-items: center; justify-content: center; font-size: 28rpx;
+}
+
+.slot-med-icon-sage { background: $sage-light; }
+.slot-med-icon-coral { background: $coral-light; }
+.slot-med-icon-amber { background: $amber-light; }
+
+.slot-med-info { flex: 1; min-width: 0; }
+.slot-med-name { font-size: 28rpx; font-weight: 600; color: $text; }
+.slot-med-name-past { color: $text-secondary; }
+.slot-med-dosage { font-size: 24rpx; color: $text-light; margin-top: 4rpx; }
+
+.slot-med-alert {
+  font-size: 20rpx; color: $coral; font-weight: 500;
+  display: flex; align-items: center; gap: 4rpx;
+}
+
+.slot-empty {
+  font-size: 28rpx; color: $text-light; text-align: center; padding: 16rpx 0;
+}
