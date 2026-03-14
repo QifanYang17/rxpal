@@ -1,8 +1,7 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/此间有序-RxPal-07c160?style=for-the-badge&labelColor=1a1a2e" alt="RxPal" height="40"/>
+# 此间有序 · RxPal
 
-<br/>
 <br/>
 
 **🌐 Language · 语言**
